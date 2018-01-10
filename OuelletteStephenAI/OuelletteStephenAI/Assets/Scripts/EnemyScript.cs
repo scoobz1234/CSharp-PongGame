@@ -21,7 +21,6 @@ void Update () {
             	else {
                 	Debug.Log("I can See the Player");
             	}
-
         }
 }
 }
