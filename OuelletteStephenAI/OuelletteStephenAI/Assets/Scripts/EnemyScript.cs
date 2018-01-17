@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyScript : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class EnemyScript : MonoBehaviour {
     public Transform Player, Target;
     public float threshold = -1.5f;
     public GameObject spotted,heard;
-    public bool isSpotted = false;
+    public bool isSpotted = false, isHeard = false;
 
 
     void Update () {
@@ -31,6 +32,7 @@ public class EnemyScript : MonoBehaviour {
             if (angle < 45.0f && dist < 5.0f){
                 spotted.SetActive(true);
                 isSpotted = true;
+                ReloadLevel();
             }
             else {
                 spotted.SetActive(false);
@@ -38,11 +40,24 @@ public class EnemyScript : MonoBehaviour {
             }
             if (!isSpotted && angle < 360 && dist < 8.0f) {
                 heard.SetActive(true);
+                isHeard = true;
+                SmoothLookAt(-otherPosition);
             }
             else
             {
                 heard.SetActive(false);
+                isHeard = false;
             }
         }
 }
+    void SmoothLookAt(Vector3 newDirection)
+    {
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), Time.deltaTime);
+    }
+
+    void ReloadLevel() {
+        if (isSpotted) {
+            SceneManager.LoadScene(0);
+        }
+    }
 }

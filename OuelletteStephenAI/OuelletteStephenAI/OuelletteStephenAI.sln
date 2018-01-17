@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OuelletteStephenAI", "OuelletteStephenAI.csproj", "{294A474F-6F3C-FC31-9237-2C416F8B9ADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OuelletteStephenAI.Editor", "OuelletteStephenAI.Editor.csproj", "{804BD0BB-8A3B-D855-1D99-AF44D150D0AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{294A474F-6F3C-FC31-9237-2C416F8B9ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294A474F-6F3C-FC31-9237-2C416F8B9ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294A474F-6F3C-FC31-9237-2C416F8B9ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804BD0BB-8A3B-D855-1D99-AF44D150D0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804BD0BB-8A3B-D855-1D99-AF44D150D0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804BD0BB-8A3B-D855-1D99-AF44D150D0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804BD0BB-8A3B-D855-1D99-AF44D150D0AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
